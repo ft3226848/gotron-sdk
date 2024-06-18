@@ -11,6 +11,7 @@ func RecoverPubkey(hash []byte, signature []byte) (address.Address, error) {
 
 	if signature[64] >= 27 {
 		signature[64] -= 27
+
 	}
 
 	sigPublicKey, err := RecoverPubkey(hash, signature)
